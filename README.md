@@ -1,2 +1,2 @@
 # baekjoon_algorithm
-algorithm study logs
+Algorithm study logs
