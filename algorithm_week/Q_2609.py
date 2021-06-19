@@ -2,7 +2,7 @@
 # 정수론 / 유클리드 호제법
 # 반복문으로 풀기
 
-a, b = map(int, input().split())  # 10,000 이하의 자연수 두 개
+a, b = map(int, input().split())
 
 if a < b:
     a, b = b, a
@@ -12,7 +12,32 @@ while num1 % num2 != 0:
     remainder = num1 % num2
     num1 = num2
     num2 = remainder
-GCM = num2
-LCM = GCM * (a // GCM) * (b // GCM)
-print(GCM)
+GCD = num2
+LCM = GCD * (a // GCD) * (b // GCD)
+print(GCD)
 print(LCM)
+
+
+
+# 함수로 푼다면?
+# a, b = map(int, input().split())
+#
+# if a < b:
+#     a, b = b, a
+#
+#
+# def gcd(a, b):
+#     while b != 0:
+#         c = a % b
+#         a = b
+#         b = c
+#     return a
+#
+#
+# def lcm(a, b):
+#     GCD = gcd(a, b)
+#     return (a * b) // GCD
+#
+#
+# print(gcd(a, b))
+# print(lcm(a, b))
